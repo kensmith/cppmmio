@@ -16,4 +16,9 @@ complete example for an actual CPU here.
 
 https://github.com/kensmith/cortex-from-scratch
 
+If you need an ARM toolchain, this makefile might do the
+trick.
+
+https://github.com/kensmith/build-arm-none-eabi-gxx
+
 vim:tw=60:
