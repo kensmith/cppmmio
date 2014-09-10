@@ -12,8 +12,8 @@ Disassembly of section .text:
    )
    { *device = ((value << offset) & mask); }
    0:	4b02      	ldr	r3, [pc, #8]	; (c <main+0xc>)
-   2:	2202      	movs	r2, #2
-   4:	601a      	str	r2, [r3, #0]
+   2:	2000      	movs	r0, #0
+   4:	6018      	str	r0, [r3, #0]
    static uint32_t read(
       volatile uint32_t * device,
       int offset,
@@ -27,6 +27,6 @@ Disassembly of section .text:
    //enabled::write(1); // error
    //flag::read(); //error
 }
-   8:	2000      	movs	r0, #0
-   a:	4770      	bx	lr
+   8:	4770      	bx	lr
+   a:	bf00      	nop
    c:	ffff0000 	.word	0xffff0000
