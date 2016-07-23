@@ -21,4 +21,8 @@ trick.
 
 https://github.com/kensmith/build-arm-none-eabi-gxx
 
+Here is a quick explanation of what's going on here.
+
+https://youtu.be/lrrQaa_-hzU
+
 vim:tw=60:
