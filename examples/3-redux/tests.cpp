@@ -2,7 +2,7 @@
 #include <iostream>
 #include "generate_mask.hpp"
 
-#define noisy
+// #define noisy
 
 int main()
 {
