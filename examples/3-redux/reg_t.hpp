@@ -12,16 +12,13 @@ struct reg_t
 
    static uint32_t read()
    {
-      mut_t::read(
-         reinterpret_cast<volatile uint32_t*>(addr), offset,
-         generate_mask(offset, width));
+       constexpr uint32_t mask = generate_mask(offset, width);
+       return mut_t::read(reinterpret_cast<volatile uint32_t*>(addr), offset, mask);
    }
 
    static void write(uint32_t val)
    {
-      mut_t::write(
-         reinterpret_cast<volatile uint32_t*>(addr), offset,
-         generate_mask(offset, width), val);
+       constexpr uint32_t mask = generate_mask(offset, width);
+       mut_t::write(reinterpret_cast<volatile uint32_t*>(addr), offset, mask, val);
    }
 };
-

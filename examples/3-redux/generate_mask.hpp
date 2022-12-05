@@ -4,7 +4,7 @@
 
 constexpr uint32_t generate_unshifted_mask(int width)
 {
-   return width ? 0 : 1 | generate_unshifted_mask(width - 1);
+   return width ? 1 | generate_unshifted_mask(width - 1) << 1: 0;
 }
 
 constexpr uint32_t generate_mask(int width, int offset)
